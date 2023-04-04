@@ -30,27 +30,11 @@ class game
     }
 
     /**
-     * @param int $id
-     */
-    public function setId(int $id): void
-    {
-        $this->id = $id;
-    }
-
-    /**
      * @return string
      */
     public function getName(): string
     {
         return $this->name;
-    }
-
-    /**
-     * @param string $name
-     */
-    public function setName(string $name): void
-    {
-        $this->name = $name;
     }
 
     /**
@@ -61,13 +45,6 @@ class game
         return $this->developer;
     }
 
-    /**
-     * @param string $developer
-     */
-    public function setDeveloper(string $developer): void
-    {
-        $this->developer = $developer;
-    }
 
     /**
      * @return string
@@ -78,14 +55,6 @@ class game
     }
 
     /**
-     * @param string $genre
-     */
-    public function setGenre(string $genre): void
-    {
-        $this->genre = $genre;
-    }
-
-    /**
      * @return int
      */
     public function getMaxPlayers(): int
@@ -93,13 +62,6 @@ class game
         return $this->maxPlayers;
     }
 
-    /**
-     * @param int $maxPlayers
-     */
-    public function setMaxPlayers(int $maxPlayers): void
-    {
-        $this->maxPlayers = $maxPlayers;
-    }
 
     /**
      * @return string
@@ -107,13 +69,5 @@ class game
     public function getImglink(): string
     {
         return $this->imglink;
-    }
-
-    /**
-     * @param string $imglink
-     */
-    public function setImglink(string $imglink): void
-    {
-        $this->imglink = $imglink;
     }
 }

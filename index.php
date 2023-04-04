@@ -1,10 +1,6 @@
 <?php
 require_once 'GameDao.php';
-
-$gameDao = new GameDao();
-    
-$games = $gameDao->fetchAll();
-
+require_once 'gamecardfunc.php';
 ?>
     
 <!DOCTYPE html>
@@ -33,24 +29,11 @@ $games = $gameDao->fetchAll();
 
 <section class="collection">
 
-    <?php
-    $html = '';
-    foreach ($games as $game) {
-        $html .= '<div class="game-card">'
-            . '<h2>' . $game->getName() . '</h2>'
-            . '<img src="' . $game->getImglink() . '" alt="' . $game->getName() . ' cart">'
-            . '<p>Developed by ' . $game->getDeveloper() . '</p>'
-            . '<p>Genre: ' . $game->getGenre() . '</p>'
-            . '<p>Maxplayers: ' . $game->getMaxplayers() . '</p>'
-            . '</div>';
-    }
-    echo $html;
-
-    ?>
+<?php
+echo gameCard();
+?>
 
 </section>
-
-
 
 </body>
 </html>
