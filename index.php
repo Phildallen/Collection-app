@@ -29,7 +29,7 @@ $games = $gameDao->fetchAll();
 
 <body>
     
-<h1>The carts</h1>
+<h1>My Super Nintendo Entertainment System (SNES) game collection</h1>
 
 <section class="collection">
 
@@ -37,8 +37,8 @@ $games = $gameDao->fetchAll();
     $html = '';
     foreach ($games as $game) {
         $html .= '<div class="game-card">'
-            . '<h1>' . $game->getName() . '</h1>'
-            . '<img src="' . $game->getImglink() . '" alt="' . $game->getName() . '">'
+            . '<h2>' . $game->getName() . '</h2>'
+            . '<img src="' . $game->getImglink() . '" alt="' . $game->getName() . ' cart">'
             . '<p>Developed by ' . $game->getDeveloper() . '</p>'
             . '<p>Genre: ' . $game->getGenre() . '</p>'
             . '<p>Maxplayers: ' . $game->getMaxplayers() . '</p>'
