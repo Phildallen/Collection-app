@@ -27,8 +27,8 @@ class GameDao
 
         $games = [];
         foreach ($rows as $row) {
-        $game = new Game($row['name'], $row['developer'], $row['genre'], $row['maxplayers'], $row['imglink'], $row['id']);
-        $games[] = $game;
+            $game = new Game($row['name'], $row['developer'], $row['genre'], $row['maxplayers'], $row['imglink'], $row['id']);
+            $games[] = $game;
         }
 
         return $games;

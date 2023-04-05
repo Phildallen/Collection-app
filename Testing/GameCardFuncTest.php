@@ -1,6 +1,6 @@
 <?php
 
-require_once 'gamecardfunc.php';
+require_once '../gamecardfunc.php';
 require_once '../Game.php';
 
 use PHPUnit\Framework\TestCase;
