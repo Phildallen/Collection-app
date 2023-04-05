@@ -1,10 +1,9 @@
 <?php
 require_once '../GameDao.php';
 
-function gameCard()
+function gameCard(array $games): string
 {
-    $gameDao = new GameDao();
-    $games = $gameDao->fetchAll();
+
     $card = "";
     foreach ($games as $game) {
         if ($game->getMaxplayers() == 1) {
@@ -15,8 +14,7 @@ function gameCard()
                 . '<p>Genre: ' . $game->getGenre() . '</p>'
                 . '<p>Single Player</p>'
                 . '</div>';
-        }
-        else {
+        } else {
             $card .= '<div class="game-card">'
                 . '<h2>' . $game->getName() . '</h2>'
                 . '<img src="' . $game->getImglink() . '" alt="' . $game->getName() . ' cart">'
@@ -24,7 +22,8 @@ function gameCard()
                 . '<p>Genre: ' . $game->getGenre() . '</p>'
                 . '<p>Maximum no. players: ' . $game->getMaxplayers() . '</p>'
                 . '</div>';
+//        }
         }
+        return $card;
     }
-    return $card;
 }

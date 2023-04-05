@@ -30,7 +30,9 @@ require_once 'gamecardfunc.php';
 <section class="collection">
 
 <?php
-echo gameCard();
+$gameDao = new GameDao();
+$games = $gameDao->fetchAll();
+echo gameCard($games);
 ?>
 
 </section>

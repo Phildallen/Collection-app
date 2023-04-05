@@ -1,10 +1,9 @@
 <?php
 require_once 'GameDao.php';
 
-function gameCard()
+function gameCard(array $games): string
 {
-    $gameDao = new GameDao();
-    $games = $gameDao->fetchAll();
+
     $card = "";
     foreach ($games as $game) {
         if ($game->getMaxplayers() == 1) {
