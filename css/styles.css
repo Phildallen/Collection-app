@@ -1,4 +1,39 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
+body {
+  background-color: #f1f1f1;
+  margin: 2rem;
+}
+
+h1{
+    text-align: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.collection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+}
+.game-card {
+  border: 10px solid #ee0000;
+  border-radius: 3rem;
+  padding: 1rem;
+  display: grid;
+  max-width: 20rem;
+  min-width: 20rem;
+  max-height: 34rem;
+  min-height: 34rem;
+  justify-items: center;
+}
+
+
+
+
 
